@@ -30,6 +30,9 @@
                             <constraint firstAttribute="trailing" secondItem="bEI-gu-GDw" secondAttribute="trailing" constant="59" id="vSI-8c-UHi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="bEI-gu-GDw" id="jQx-ae-JVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

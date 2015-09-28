@@ -8,20 +8,41 @@
 
 #import "ViewController.h"
 
+#import "WMKeyboardView.h"
+
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
 @implementation ViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped)];
+    [self.view addGestureRecognizer:recognizer];
+    
+    CGFloat keyboardViewX = 0;
+    CGFloat keyboardViewY = 0;
+    CGFloat keyboardViewW = CGRectGetWidth(self.view.frame);
+    CGFloat keyboardViewH = 250;
+    WMKeyboardView *keyboardView = [WMKeyboardView keyboardViewWithKeyboardType:WMKeyboardTypeNumber];
+    keyboardView.frame = CGRectMake(keyboardViewX, keyboardViewY, keyboardViewW, keyboardViewH);
+    self.textField.inputView = keyboardView;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Private
+
+- (void)backgroundTapped {
+    [self.view endEditing:YES];
 }
 
 @end

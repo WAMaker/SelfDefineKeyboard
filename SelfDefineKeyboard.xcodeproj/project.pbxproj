@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F968545B4BF3477430106BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55115DA83CA75C3694EB2570 /* libPods.a */; };
+		CA0A6D5B1BB8374800077604 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A6D5A1BB8374800077604 /* UIColor+extension.m */; };
 		CA5572FD1BA176B0003780BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5572FC1BA176B0003780BC /* main.m */; };
 		CA5573001BA176B0003780BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5572FF1BA176B0003780BC /* AppDelegate.m */; };
 		CA5573031BA176B0003780BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5573021BA176B0003780BC /* ViewController.m */; };
@@ -14,6 +16,8 @@
 		CA5573081BA176B0003780BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5573071BA176B0003780BC /* Images.xcassets */; };
 		CA55730B1BA176B0003780BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5573091BA176B0003780BC /* LaunchScreen.xib */; };
 		CA5573171BA176B0003780BC /* SelfDefineKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */; };
+		CA922AF11BB793B0002D95E0 /* WMKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */; };
+		CA922AF41BB79531002D95E0 /* WMKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF31BB79531002D95E0 /* WMKeyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55115DA83CA75C3694EB2570 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A595791FC35D011F9C11E0A5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AAF94E82BFC783F90829BF18 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CA0A6D591BB8374800077604 /* UIColor+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extension.h"; sourceTree = "<group>"; };
+		CA0A6D5A1BB8374800077604 /* UIColor+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extension.m"; sourceTree = "<group>"; };
 		CA5572F71BA176B0003780BC /* SelfDefineKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfDefineKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5572FB1BA176B0003780BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA5572FC1BA176B0003780BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +49,10 @@
 		CA5573101BA176B0003780BC /* SelfDefineKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfDefineKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5573151BA176B0003780BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfDefineKeyboardTests.m; sourceTree = "<group>"; };
+		CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardView.h; sourceTree = "<group>"; };
+		CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardView.m; sourceTree = "<group>"; };
+		CA922AF21BB79531002D95E0 /* WMKeyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyView.h; sourceTree = "<group>"; };
+		CA922AF31BB79531002D95E0 /* WMKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F968545B4BF3477430106BA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +74,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AE92DEB1FAEDF67EDE9E067 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAF94E82BFC783F90829BF18 /* Pods.debug.xcconfig */,
+				A595791FC35D011F9C11E0A5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B4E40AC4FA87EF869CF6AA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55115DA83CA75C3694EB2570 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA5572EE1BA176B0003780BC = {
 			isa = PBXGroup;
 			children = (
 				CA5572F91BA176B0003780BC /* SelfDefineKeyboard */,
 				CA5573131BA176B0003780BC /* SelfDefineKeyboardTests */,
 				CA5572F81BA176B0003780BC /* Products */,
+				1AE92DEB1FAEDF67EDE9E067 /* Pods */,
+				9B4E40AC4FA87EF869CF6AA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +118,12 @@
 				CA5572FF1BA176B0003780BC /* AppDelegate.m */,
 				CA5573011BA176B0003780BC /* ViewController.h */,
 				CA5573021BA176B0003780BC /* ViewController.m */,
+				CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */,
+				CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */,
+				CA922AF21BB79531002D95E0 /* WMKeyView.h */,
+				CA922AF31BB79531002D95E0 /* WMKeyView.m */,
+				CA0A6D591BB8374800077604 /* UIColor+extension.h */,
+				CA0A6D5A1BB8374800077604 /* UIColor+extension.m */,
 				CA5573041BA176B0003780BC /* Main.storyboard */,
 				CA5573071BA176B0003780BC /* Images.xcassets */,
 				CA5573091BA176B0003780BC /* LaunchScreen.xib */,
@@ -126,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA55731A1BA176B0003780BC /* Build configuration list for PBXNativeTarget "SelfDefineKeyboard" */;
 			buildPhases = (
+				CDE2A087F5E46F974A888672 /* Check Pods Manifest.lock */,
 				CA5572F31BA176B0003780BC /* Sources */,
 				CA5572F41BA176B0003780BC /* Frameworks */,
 				CA5572F51BA176B0003780BC /* Resources */,
+				3732459415EE035659A6317F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +255,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3732459415EE035659A6317F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDE2A087F5E46F974A888672 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA5572F31BA176B0003780BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CA5573031BA176B0003780BC /* ViewController.m in Sources */,
+				CA0A6D5B1BB8374800077604 /* UIColor+extension.m in Sources */,
+				CA922AF41BB79531002D95E0 /* WMKeyView.m in Sources */,
 				CA5573001BA176B0003780BC /* AppDelegate.m in Sources */,
 				CA5572FD1BA176B0003780BC /* main.m in Sources */,
+				CA922AF11BB793B0002D95E0 /* WMKeyboardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +422,11 @@
 		};
 		CA55731B1BA176B0003780BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF94E82BFC783F90829BF18 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SelfDefineKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +434,11 @@
 		};
 		CA55731C1BA176B0003780BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A595791FC35D011F9C11E0A5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SelfDefineKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +497,7 @@
 				CA55731C1BA176B0003780BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA55731D1BA176B0003780BC /* Build configuration list for PBXNativeTarget "SelfDefineKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +506,7 @@
 				CA55731F1BA176B0003780BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
