@@ -17,7 +17,7 @@
 		CA55730B1BA176B0003780BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5573091BA176B0003780BC /* LaunchScreen.xib */; };
 		CA5573171BA176B0003780BC /* SelfDefineKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */; };
 		CA922AF11BB793B0002D95E0 /* WMKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */; };
-		CA922AF41BB79531002D95E0 /* WMKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF31BB79531002D95E0 /* WMKeyView.m */; };
+		CA922AF41BB79531002D95E0 /* WMKeyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF31BB79531002D95E0 /* WMKeyButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfDefineKeyboardTests.m; sourceTree = "<group>"; };
 		CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardView.h; sourceTree = "<group>"; };
 		CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardView.m; sourceTree = "<group>"; };
-		CA922AF21BB79531002D95E0 /* WMKeyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyView.h; sourceTree = "<group>"; };
-		CA922AF31BB79531002D95E0 /* WMKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyView.m; sourceTree = "<group>"; };
+		CA922AF21BB79531002D95E0 /* WMKeyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyButton.h; sourceTree = "<group>"; };
+		CA922AF31BB79531002D95E0 /* WMKeyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +120,8 @@
 				CA5573021BA176B0003780BC /* ViewController.m */,
 				CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */,
 				CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */,
-				CA922AF21BB79531002D95E0 /* WMKeyView.h */,
-				CA922AF31BB79531002D95E0 /* WMKeyView.m */,
+				CA922AF21BB79531002D95E0 /* WMKeyButton.h */,
+				CA922AF31BB79531002D95E0 /* WMKeyButton.m */,
 				CA0A6D591BB8374800077604 /* UIColor+extension.h */,
 				CA0A6D5A1BB8374800077604 /* UIColor+extension.m */,
 				CA5573041BA176B0003780BC /* Main.storyboard */,
@@ -295,7 +295,7 @@
 			files = (
 				CA5573031BA176B0003780BC /* ViewController.m in Sources */,
 				CA0A6D5B1BB8374800077604 /* UIColor+extension.m in Sources */,
-				CA922AF41BB79531002D95E0 /* WMKeyView.m in Sources */,
+				CA922AF41BB79531002D95E0 /* WMKeyButton.m in Sources */,
 				CA5573001BA176B0003780BC /* AppDelegate.m in Sources */,
 				CA5572FD1BA176B0003780BC /* main.m in Sources */,
 				CA922AF11BB793B0002D95E0 /* WMKeyboardView.m in Sources */,

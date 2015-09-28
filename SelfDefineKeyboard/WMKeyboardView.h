@@ -16,7 +16,8 @@ typedef enum : NSUInteger {
 @interface WMKeyboardView : UIView
 
 - (instancetype)initWithKeyboardType:(WMKeyboardType)type;
-
 + (instancetype)keyboardViewWithKeyboardType:(WMKeyboardType)type;
+
+- (void)exchangeNumber;
 
 @end

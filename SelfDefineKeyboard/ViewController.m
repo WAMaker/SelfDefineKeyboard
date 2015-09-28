@@ -10,9 +10,11 @@
 
 #import "WMKeyboardView.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (strong, nonatomic) WMKeyboardView *keyboardView;
 
 @end
 
@@ -30,9 +32,9 @@
     CGFloat keyboardViewY = 0;
     CGFloat keyboardViewW = CGRectGetWidth(self.view.frame);
     CGFloat keyboardViewH = 250;
-    WMKeyboardView *keyboardView = [WMKeyboardView keyboardViewWithKeyboardType:WMKeyboardTypeNumber];
-    keyboardView.frame = CGRectMake(keyboardViewX, keyboardViewY, keyboardViewW, keyboardViewH);
-    self.textField.inputView = keyboardView;
+    self.keyboardView = [WMKeyboardView keyboardViewWithKeyboardType:WMKeyboardTypeNumber];
+    self.keyboardView.frame = CGRectMake(keyboardViewX, keyboardViewY, keyboardViewW, keyboardViewH);
+    self.textField.inputView = self.keyboardView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +45,13 @@
 
 - (void)backgroundTapped {
     [self.view endEditing:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    [self.keyboardView exchangeNumber];
+    return YES;
 }
 
 @end
