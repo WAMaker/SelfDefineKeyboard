@@ -12,12 +12,18 @@
 
 #import "UIColor+extension.h"
 
+static NSString *const kDeleteText = @"删除";
+static NSString *const kDoneText = @"完成";
+
 @interface WMKeyboardView ()
 
 @property (assign, nonatomic) WMKeyboardType type;
 
 @property (strong, nonatomic) NSArray *numberKeys;
+
 @property (strong, nonatomic) NSArray *textInKeyboardTypeNumber;
+@property (assign, nonatomic) NSInteger delIndex;
+@property (assign, nonatomic) NSInteger doneIndex;
 
 @end
 
@@ -32,6 +38,8 @@
                                           @"4", @"5", @"6",
                                           @"7", @"8", @"9",
                                           @"删除", @"0", @"确定"];
+        self.delIndex = 9;
+        self.doneIndex = 11;
     }
     
     return self;
@@ -59,9 +67,9 @@
                 WMKeyButton *button = [[WMKeyButton alloc] initWithFrame:CGRectMake(keyX, keyY, keyWidth, keyHeight)];
                 [self addSubview:button];
                 [array addObject:button];
-                if (i == 9) {
+                if (i == self.delIndex) {
                     button.type = WMKeyButtonTypeDel;
-                } else if (i == 11) {
+                } else if (i == self.doneIndex) {
                     button.type = WMKeyButtonTypeDone;
                 } else {
                     button.type = WMKeyButtonTypeOther;
@@ -76,6 +84,7 @@
             }
             self.numberKeys = array;
             
+            // 水平分隔线
             CGFloat viewX = 0;
             CGFloat viewY = keyHeight;
             CGFloat viewW = frame.size.width;
@@ -88,6 +97,7 @@
                 viewY += keyHeight;
             }
             
+            // 垂直分隔线
             viewX = keyWidth;
             viewY = 0;
             viewW = 0.5;
@@ -112,15 +122,21 @@
 - (void)exchangeNumber {
     NSMutableArray *numbers = [NSMutableArray array];
     
-    for (int i = 0; i < 10; i++) {
+    int startNum = 0;
+    int length = 10;
+    
+    for (int i = startNum; i < length; i++) {
         [numbers addObject:[NSString stringWithFormat:@"%d", i]];
     }
     
     for (int i = 0; i < self.numberKeys.count; i++) {
         WMKeyButton *button = self.numberKeys[i];
         
-        if (i == 9 || i == 11) {
-            [button setTitle:self.textInKeyboardTypeNumber[i] forState:UIControlStateNormal];
+        if (i == self.delIndex) {
+            [button setTitle:kDeleteText forState:UIControlStateNormal];
+            continue;
+        } else if (i == self.doneIndex) {
+            [button setTitle:kDoneText forState:UIControlStateNormal];
             continue;
         }
         
