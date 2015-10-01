@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMKeyKeyboardDefine.h"
 
-typedef enum : NSUInteger {
-    WMKeyButtonTypeDel,
-    WMKeyButtonTypeDone,
-    WMKeyButtonTypeOther
-} WMKeyButtonType;
+typedef void(^buttonClickBlock)(WMKeyButtonType buttonType, NSString *text);
 
 @interface WMKeyButton : UIButton
 
 @property (assign, nonatomic) WMKeyButtonType type;
+
+- (void)setButtonClickBlock:(buttonClickBlock)block;
 
 @end

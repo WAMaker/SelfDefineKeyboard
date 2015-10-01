@@ -14,14 +14,15 @@
 
 static NSString *const kDeleteText = @"删除";
 static NSString *const kDoneText = @"完成";
+static NSInteger const kWMKeyboardTypeNumberKeyNumber = 12;
 
 @interface WMKeyboardView ()
 
 @property (assign, nonatomic) WMKeyboardType type;
 
 @property (strong, nonatomic) NSArray *numberKeys;
+@property (strong, nonatomic) WMKeyboardBlock block;
 
-@property (strong, nonatomic) NSArray *textInKeyboardTypeNumber;
 @property (assign, nonatomic) NSInteger delIndex;
 @property (assign, nonatomic) NSInteger doneIndex;
 
@@ -34,10 +35,6 @@ static NSString *const kDoneText = @"完成";
         self.type = type;
         self.backgroundColor = [UIColor colorWithHexString:@"#dfdfdf"];
         
-        self.textInKeyboardTypeNumber = @[@"1", @"2", @"3",
-                                          @"4", @"5", @"6",
-                                          @"7", @"8", @"9",
-                                          @"删除", @"0", @"确定"];
         self.delIndex = 9;
         self.doneIndex = 11;
     }
@@ -63,9 +60,13 @@ static NSString *const kDoneText = @"完成";
             CGFloat keyY = 0;
             
             NSMutableArray *array = [NSMutableArray array];
-            for (int i = 0; i < self.textInKeyboardTypeNumber.count; i++) {
+            for (int i = 0; i < kWMKeyboardTypeNumberKeyNumber; i++) {
                 WMKeyButton *button = [[WMKeyButton alloc] initWithFrame:CGRectMake(keyX, keyY, keyWidth, keyHeight)];
                 [self addSubview:button];
+                WS(weakSelf);
+                [button setButtonClickBlock:^(WMKeyButtonType buttonType, NSString *text) {
+                    weakSelf.block(buttonType, text);
+                }];
                 [array addObject:button];
                 if (i == self.delIndex) {
                     button.type = WMKeyButtonTypeDel;
@@ -145,6 +146,10 @@ static NSString *const kDoneText = @"完成";
         
         [numbers removeObjectAtIndex:index];
     }
+}
+
+- (void)setWMKeyboardBlock:(WMKeyboardBlock)block {
+    self.block = block;
 }
 
 @end

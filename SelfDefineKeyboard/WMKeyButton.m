@@ -10,6 +10,12 @@
 
 #import "UIColor+extension.h"
 
+@interface WMKeyButton ()
+
+@property (strong, nonatomic) buttonClickBlock block;
+
+@end
+
 @implementation WMKeyButton
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -24,8 +30,16 @@
     return self;
 }
 
+- (void)setButtonClickBlock:(buttonClickBlock)block {
+    self.block = block;
+}
+
 - (void)keyClicked:(WMKeyButton *)button {
-    
+    NSString *text = @"";
+    if (self.type == WMKeyButtonTypeOther) {
+        text = button.titleLabel.text;
+    }
+    self.block(self.type, text);
 }
 
 @end

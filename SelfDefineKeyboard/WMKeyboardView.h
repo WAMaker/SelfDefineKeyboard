@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMKeyKeyboardDefine.h"
 
-typedef enum : NSUInteger {
-    WMKeyboardTypeNumber,
-    WMKeyboardTypeMore
-} WMKeyboardType;
+typedef void(^WMKeyboardBlock)(WMKeyButtonType type, NSString *text);
 
 @interface WMKeyboardView : UIView
 
@@ -19,5 +17,6 @@ typedef enum : NSUInteger {
 + (instancetype)keyboardViewWithKeyboardType:(WMKeyboardType)type;
 
 - (void)exchangeNumber;
+- (void)setWMKeyboardBlock:(WMKeyboardBlock)block;
 
 @end

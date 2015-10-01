@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,29 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入6-8位数字登录密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEI-gu-GDw">
-                                <rect key="frame" x="60" y="70" width="481" height="30"/>
-                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJM-bc-vM0">
+                                <rect key="frame" x="73" y="99" width="454" height="221"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="VZd-a2-IzK"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="HTr-6r-ouX"/>
                                 </connections>
-                            </textField>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="下面那货是TextView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz9-LR-FqI">
+                                <rect key="frame" x="224" y="70" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bEI-gu-GDw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="WTA-XK-1yJ"/>
-                            <constraint firstItem="bEI-gu-GDw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="fgV-4S-IJh"/>
-                            <constraint firstAttribute="trailing" secondItem="bEI-gu-GDw" secondAttribute="trailing" constant="59" id="vSI-8c-UHi"/>
+                            <constraint firstItem="bJM-bc-vM0" firstAttribute="top" secondItem="Iz9-LR-FqI" secondAttribute="bottom" constant="8" id="MeK-tg-9Zh"/>
+                            <constraint firstAttribute="centerX" secondItem="Iz9-LR-FqI" secondAttribute="centerX" id="RP5-uR-KzM"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bJM-bc-vM0" secondAttribute="bottom" constant="280" id="iPe-g3-vBn"/>
+                            <constraint firstItem="bJM-bc-vM0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="79" id="lOu-MM-ra2"/>
+                            <constraint firstAttribute="centerX" secondItem="bJM-bc-vM0" secondAttribute="centerX" id="nai-mE-e4c"/>
+                            <constraint firstItem="bJM-bc-vM0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="73" id="pJS-Pn-PBr"/>
+                            <constraint firstItem="Iz9-LR-FqI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="rVG-ch-unz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="bEI-gu-GDw" id="jQx-ae-JVT"/>
+                        <outlet property="textView" destination="bJM-bc-vM0" id="2N4-EY-wLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="833" y="402"/>
         </scene>
     </scenes>
 </document>

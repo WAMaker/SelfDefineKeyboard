@@ -49,6 +49,8 @@
 		CA5573101BA176B0003780BC /* SelfDefineKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfDefineKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5573151BA176B0003780BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfDefineKeyboardTests.m; sourceTree = "<group>"; };
+		CA8115211BBCE9E0003C3111 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CA8452581BBC267E008473FD /* WMKeyKeyboardDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyKeyboardDefine.h; sourceTree = "<group>"; };
 		CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardView.h; sourceTree = "<group>"; };
 		CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardView.m; sourceTree = "<group>"; };
 		CA922AF21BB79531002D95E0 /* WMKeyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyButton.h; sourceTree = "<group>"; };
@@ -114,19 +116,7 @@
 		CA5572F91BA176B0003780BC /* SelfDefineKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				CA5572FE1BA176B0003780BC /* AppDelegate.h */,
-				CA5572FF1BA176B0003780BC /* AppDelegate.m */,
-				CA5573011BA176B0003780BC /* ViewController.h */,
-				CA5573021BA176B0003780BC /* ViewController.m */,
-				CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */,
-				CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */,
-				CA922AF21BB79531002D95E0 /* WMKeyButton.h */,
-				CA922AF31BB79531002D95E0 /* WMKeyButton.m */,
-				CA0A6D591BB8374800077604 /* UIColor+extension.h */,
-				CA0A6D5A1BB8374800077604 /* UIColor+extension.m */,
-				CA5573041BA176B0003780BC /* Main.storyboard */,
-				CA5573071BA176B0003780BC /* Images.xcassets */,
-				CA5573091BA176B0003780BC /* LaunchScreen.xib */,
+				CA8115221BBD5010003C3111 /* Classes */,
 				CA5572FA1BA176B0003780BC /* Supporting Files */,
 			);
 			path = SelfDefineKeyboard;
@@ -135,6 +125,9 @@
 		CA5572FA1BA176B0003780BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA5573041BA176B0003780BC /* Main.storyboard */,
+				CA5573071BA176B0003780BC /* Images.xcassets */,
+				CA5573091BA176B0003780BC /* LaunchScreen.xib */,
 				CA5572FB1BA176B0003780BC /* Info.plist */,
 				CA5572FC1BA176B0003780BC /* main.m */,
 			);
@@ -156,6 +149,57 @@
 				CA5573151BA176B0003780BC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA8115221BBD5010003C3111 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CA8115261BBD5057003C3111 /* Other */,
+				CA8115251BBD5051003C3111 /* Model */,
+				CA8115241BBD5042003C3111 /* View */,
+				CA8115231BBD5020003C3111 /* Controller */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CA8115231BBD5020003C3111 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA5573011BA176B0003780BC /* ViewController.h */,
+				CA5573021BA176B0003780BC /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CA8115241BBD5042003C3111 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */,
+				CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */,
+				CA922AF21BB79531002D95E0 /* WMKeyButton.h */,
+				CA922AF31BB79531002D95E0 /* WMKeyButton.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CA8115251BBD5051003C3111 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CA8115261BBD5057003C3111 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CA5572FE1BA176B0003780BC /* AppDelegate.h */,
+				CA5572FF1BA176B0003780BC /* AppDelegate.m */,
+				CA8452581BBC267E008473FD /* WMKeyKeyboardDefine.h */,
+				CA8115211BBCE9E0003C3111 /* PrefixHeader.pch */,
+				CA0A6D591BB8374800077604 /* UIColor+extension.h */,
+				CA0A6D5A1BB8374800077604 /* UIColor+extension.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +469,7 @@
 			baseConfigurationReference = AAF94E82BFC783F90829BF18 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = SelfDefineKeyboard/PrefixHeader.pch;
 				INFOPLIST_FILE = SelfDefineKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -437,6 +482,7 @@
 			baseConfigurationReference = A595791FC35D011F9C11E0A5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = SelfDefineKeyboard/PrefixHeader.pch;
 				INFOPLIST_FILE = SelfDefineKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
