@@ -12,7 +12,7 @@
 
 @interface WMKeyButton ()
 
-@property (strong, nonatomic) buttonClickBlock block;
+@property (copy, nonatomic) buttonClickBlock block;
 
 @end
 

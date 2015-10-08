@@ -15,3 +15,5 @@
 #endif /* PrefixHeader_pch */
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self
+
+#import <CoreData/CoreData.h>

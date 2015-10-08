@@ -18,13 +18,13 @@ static NSInteger const kWMKeyboardTypeNumberKeyNumber = 12;
 
 @interface WMKeyboardView ()
 
-@property (assign, nonatomic) WMKeyboardType type;
-
 @property (strong, nonatomic) NSArray *numberKeys;
-@property (strong, nonatomic) WMKeyboardBlock block;
+
+@property (copy, nonatomic) WMKeyboardBlock block;
 
 @property (assign, nonatomic) NSInteger delIndex;
 @property (assign, nonatomic) NSInteger doneIndex;
+@property (assign, nonatomic) WMKeyboardType type;
 
 @end
 

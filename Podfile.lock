@@ -1,10 +1,19 @@
 PODS:
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - Reveal-iOS-SDK (1.5.1)
 
 DEPENDENCIES:
+  - ReactiveCocoa
   - Reveal-iOS-SDK
 
 SPEC CHECKSUMS:
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   Reveal-iOS-SDK: c9c55cad2729c85f6ced415f1b21857c9a2d8ef9
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

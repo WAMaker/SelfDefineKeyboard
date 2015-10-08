@@ -18,6 +18,8 @@
 		CA5573171BA176B0003780BC /* SelfDefineKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */; };
 		CA922AF11BB793B0002D95E0 /* WMKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */; };
 		CA922AF41BB79531002D95E0 /* WMKeyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF31BB79531002D95E0 /* WMKeyButton.m */; };
+		CABB48361BC624670036C1AA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABB48351BC624670036C1AA /* CoreData.framework */; };
+		CABB48391BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CABB48371BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardView.m; sourceTree = "<group>"; };
 		CA922AF21BB79531002D95E0 /* WMKeyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyButton.h; sourceTree = "<group>"; };
 		CA922AF31BB79531002D95E0 /* WMKeyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyButton.m; sourceTree = "<group>"; };
+		CABB48351BC624670036C1AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CABB48381BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelfDefineKeyboard.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABB48361BC624670036C1AA /* CoreData.framework in Frameworks */,
 				3F968545B4BF3477430106BA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +93,7 @@
 		9B4E40AC4FA87EF869CF6AA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CABB48351BC624670036C1AA /* CoreData.framework */,
 				55115DA83CA75C3694EB2570 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -130,6 +136,7 @@
 				CA5573091BA176B0003780BC /* LaunchScreen.xib */,
 				CA5572FB1BA176B0003780BC /* Info.plist */,
 				CA5572FC1BA176B0003780BC /* main.m */,
+				CABB48371BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -338,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5573031BA176B0003780BC /* ViewController.m in Sources */,
+				CABB48391BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld in Sources */,
 				CA0A6D5B1BB8374800077604 /* UIColor+extension.m in Sources */,
 				CA922AF41BB79531002D95E0 /* WMKeyButton.m in Sources */,
 				CA5573001BA176B0003780BC /* AppDelegate.m in Sources */,
@@ -555,6 +563,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CABB48371BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CABB48381BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodel */,
+			);
+			currentVersion = CABB48381BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodel */;
+			path = SelfDefineKeyboard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CA5572EF1BA176B0003780BC /* Project object */;
 }
