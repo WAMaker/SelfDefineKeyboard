@@ -33,7 +33,7 @@
     CGFloat keyboardViewX = 0;
     CGFloat keyboardViewY = 0;
     CGFloat keyboardViewW = CGRectGetWidth(self.view.frame);
-    CGFloat keyboardViewH = 250;
+    CGFloat keyboardViewH = WMKeyboardViewHeight;
     self.keyboardView = [WMKeyboardView keyboardViewWithKeyboardType:WMKeyboardTypeNumber];
     self.keyboardView.frame = CGRectMake(keyboardViewX, keyboardViewY, keyboardViewW, keyboardViewH);
     self.textField.inputView = self.keyboardView;

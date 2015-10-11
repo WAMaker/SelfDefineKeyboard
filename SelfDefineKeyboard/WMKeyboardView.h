@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "WMKeyKeyboardDefine.h"
 
+static CGFloat WMKeyboardViewHeight = 250;
+
 typedef void(^WMKeyboardBlock)(WMKeyButtonType type, NSString *text);
 
 @interface WMKeyboardView : UIView
