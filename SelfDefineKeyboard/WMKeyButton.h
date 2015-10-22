@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WMKeyKeyboardDefine.h"
+#import "WMKeyboardDefine.h"
+
+static CGFloat const WMKeyButtonFont = 15;
 
 typedef void(^buttonClickBlock)(WMKeyButtonType buttonType, NSString *text);
 
 @interface WMKeyButton : UIButton
 
 @property (assign, nonatomic) WMKeyButtonType type;
+
++ (instancetype)keyButtonWithFrame:(CGRect)frame;
+- (instancetype)initKeyButtonWithFrame:(CGRect)frame;
 
 - (void)setButtonClickBlock:(buttonClickBlock)block;
 

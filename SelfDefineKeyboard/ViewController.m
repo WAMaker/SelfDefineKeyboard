@@ -8,15 +8,25 @@
 
 #import "ViewController.h"
 
-#import "WMKeyboardView.h"
+#import "WMKeyboardIAView.h"
+#import "WMKeyboardNumberView.h"
+#import "WMKeyboardSpecialView.h"
 
-#import "WMKeyKeyboardDefine.h"
+#import "WMKeyboardDefine.h"
+#import "UITextView+extension.h"
+#import "UITextField+extension.h"
 
-@interface ViewController () <UITextFieldDelegate>
+@interface ViewController () <UITextFieldDelegate,
+                                WMKeyboardIAViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
-@property (strong, nonatomic) WMKeyboardView *keyboardView;
+@property (strong, nonatomic) WMKeyboardIAView *keyboardIAView;
+@property (strong, nonatomic) WMKeyboardSpecialView *otherKeyboardView;
+@property (strong, nonatomic) WMKeyboardNumberView *numberKeyboardView;
+
+@property (assign, nonatomic) WMKeyboardOtherType currentType;
 
 @end
 
@@ -30,18 +40,7 @@
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped)];
     [self.view addGestureRecognizer:recognizer];
     
-    CGFloat keyboardViewX = 0;
-    CGFloat keyboardViewY = 0;
-    CGFloat keyboardViewW = CGRectGetWidth(self.view.frame);
-    CGFloat keyboardViewH = WMKeyboardViewHeight;
-    self.keyboardView = [WMKeyboardView keyboardViewWithKeyboardType:WMKeyboardTypeNumber];
-    self.keyboardView.frame = CGRectMake(keyboardViewX, keyboardViewY, keyboardViewW, keyboardViewH);
-    self.textField.inputView = self.keyboardView;
-    
-    WS(weakSelf);
-    [self.keyboardView setWMKeyboardBlock:^(WMKeyButtonType type, NSString *text) {
-        [weakSelf changeTextField:type Text:text];
-    }];
+    [self handleView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,6 +49,40 @@
 
 #pragma mark - Private
 
+- (void)handleView {
+    CGFloat viewW = CGRectGetWidth(self.view.frame);
+    
+    CGFloat keyboardViewX = 0;
+    CGFloat keyboardViewY = 0;
+    CGFloat keyboardViewW = viewW;
+    CGFloat keyboardViewH = WMKeyboardViewNumberHeight;
+    self.numberKeyboardView = [WMKeyboardNumberView keyboardWithFrame:CGRectMake(keyboardViewX, keyboardViewY, keyboardViewW, keyboardViewH)];
+    self.otherKeyboardView = [WMKeyboardSpecialView keyboardWithFrame:CGRectMake(keyboardViewX, keyboardViewY, keyboardViewW, keyboardViewH)];
+    
+    CGFloat keyboardIAViewX = 0;
+    CGFloat keyboardIAViewY = 0;
+    CGFloat keyboardIAViewW = viewW;
+    CGFloat keyboardIAViewH = WMKeyboardIAViewHeight;
+    [self.textView.layer setBorderWidth:0.5];
+    [self.textView.layer setBorderColor:[[UIColor grayColor] CGColor]];
+    [self.textView.layer setCornerRadius:5.0];
+    
+    WMKeyboardIAView *iaView = [WMKeyboardIAView iaView];
+    iaView.delegate = self;
+    self.textView.inputAccessoryView = iaView;
+    self.textView.inputAccessoryView.frame = CGRectMake(keyboardIAViewX, keyboardIAViewY, keyboardIAViewW, keyboardIAViewH);
+    self.textView.inputView = self.otherKeyboardView;
+    self.textField.inputView = self.numberKeyboardView;
+    
+    WS(weakSelf);
+    [self.numberKeyboardView setWMKeyboardBlock:^(WMKeyButtonType type, NSString *text) {
+        [weakSelf changeTextField:type Text:text];
+    }];
+    [self.otherKeyboardView setWMKeyboardBlock:^(WMKeyButtonType type, NSString *text) {
+        [weakSelf changeTextView:type Text:text];
+    }];
+}
+
 - (void)backgroundTapped {
     [self.view endEditing:YES];
 }
@@ -57,7 +90,7 @@
 - (void)changeTextField:(WMKeyButtonType)type Text:(NSString *)text {
     switch (type) {
         case WMKeyButtonTypeDel: {
-            [self changetext:text InTextField:self.textField];
+            [self.textField changetext:text];
         }
             break;
             
@@ -67,57 +100,46 @@
             break;
             
         case WMKeyButtonTypeOther: {
-            [self changetext:text InTextField:self.textField];
+            [self.textField changetext:text];
         }
             break;
     }
 }
 
-/**
- *  修改textView中的文字
- */
-- (void)changetext:(NSString *)text InTextField:(UITextField *)textField {
-    UITextPosition *beginning = textField.beginningOfDocument;
-    UITextPosition *start = textField.selectedTextRange.start;
-    UITextPosition *end = textField.selectedTextRange.end;
-    NSInteger startIndex = [textField offsetFromPosition:beginning toPosition:start];
-    NSInteger endIndex = [textField offsetFromPosition:beginning toPosition:end];
-    
-    // 将输入框中的文字分成两部分，生成新字符串，判断新字符串是否满足要求
-    NSString *originText = textField.text;
-    NSString *part1 = [originText substringToIndex:startIndex];
-    NSString *part2 = [originText substringFromIndex:endIndex];
-    
-    NSInteger offset;
-    
-    if (![text isEqualToString:@""]) {
-        offset = text.length;
-    } else {
-        if (startIndex == endIndex) { // 只删除一个字符
-            if (startIndex == 0) {
-                return;
-            }
-            offset = -1;
-            part1 = [part1 substringToIndex:(part1.length - 1)];
-        } else {
-            offset = 0;
+- (void)changeTextView:(WMKeyButtonType)type Text:(NSString *)text {
+    switch (type) {
+        case WMKeyButtonTypeDel: {
+            [self.textView changetext:text];
         }
+            break;
+            
+        case WMKeyButtonTypeDone: {
+            [self backgroundTapped];
+        }
+            break;
+            
+        case WMKeyButtonTypeOther: {
+            if (self.currentType == WMKeyboardOtherTypeCommon) {
+                [self.otherKeyboardView setButtonsWithType:WMKeyboardOtherTypeCommon];
+            }
+            [self.textView changetext:text];
+        }
+            break;
     }
-    
-    NSString *newText = [NSString stringWithFormat:@"%@%@%@", part1, text, part2];
-    textField.text = newText;
-    
-    // 重置光标位置
-    UITextPosition *now = [textField positionFromPosition:start offset:offset];
-    UITextRange *range = [textField textRangeFromPosition:now toPosition:now];
-    textField.selectedTextRange = range;
 }
 
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    [self.keyboardView exchangeNumber];
+    [self.numberKeyboardView exchangeNumber];
     return YES;
+}
+
+#pragma mark - WMKeyboardIAViewDelegate
+
+- (void)IAViewTypeChanged:(WMKeyboardOtherType)type {
+    self.currentType = type;
+    [self.otherKeyboardView setButtonsWithType:type];
 }
 
 @end

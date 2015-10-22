@@ -26,17 +26,30 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="eVS-U6-xuE"/>
                                 </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9km-Jc-uen">
+                                <rect key="frame" x="20" y="187" width="560" height="140"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="3IC-im-O8A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xac-CG-Dsz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="92" id="64e-7u-Ug7"/>
+                            <constraint firstItem="9km-Jc-uen" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Un0-9L-scC"/>
                             <constraint firstItem="xac-CG-Dsz" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="iFT-rq-xmC"/>
+                            <constraint firstItem="9km-Jc-uen" firstAttribute="top" secondItem="xac-CG-Dsz" secondAttribute="bottom" constant="45" id="otd-SX-C5Y"/>
+                            <constraint firstAttribute="trailing" secondItem="9km-Jc-uen" secondAttribute="trailing" constant="20" id="qJi-wg-cdB"/>
                             <constraint firstItem="xac-CG-Dsz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="sks-et-UKW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textField" destination="xac-CG-Dsz" id="0rW-nD-hul"/>
+                        <outlet property="textView" destination="9km-Jc-uen" id="MhX-hy-EXl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

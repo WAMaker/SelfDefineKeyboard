@@ -7,18 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WMKeyKeyboardDefine.h"
+#import "WMKeyboardDefine.h"
 
-static CGFloat WMKeyboardViewHeight = 250;
+static CGFloat WMKeyboardViewNumberHeight = 250;
 
 typedef void(^WMKeyboardBlock)(WMKeyButtonType type, NSString *text);
 
 @interface WMKeyboardView : UIView
 
-- (instancetype)initWithKeyboardType:(WMKeyboardType)type;
-+ (instancetype)keyboardViewWithKeyboardType:(WMKeyboardType)type;
+- (instancetype)initKeyboardWithFrame:(CGRect)frame;
++ (instancetype)keyboardWithFrame:(CGRect)frame;
 
-- (void)exchangeNumber;
 - (void)setWMKeyboardBlock:(WMKeyboardBlock)block;
 
 @end

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3F968545B4BF3477430106BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55115DA83CA75C3694EB2570 /* libPods.a */; };
 		CA0A6D5B1BB8374800077604 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0A6D5A1BB8374800077604 /* UIColor+extension.m */; };
+		CA525DE11BD8ACD500EB1390 /* WMKeySpecialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CA525DE01BD8ACD500EB1390 /* WMKeySpecialButton.m */; settings = {ASSET_TAGS = (); }; };
+		CA525DE71BD8B92500EB1390 /* UITextField+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CA525DE61BD8B92500EB1390 /* UITextField+extension.m */; settings = {ASSET_TAGS = (); }; };
+		CA525DEA1BD8B9D600EB1390 /* UITextView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CA525DE91BD8B9D600EB1390 /* UITextView+extension.m */; settings = {ASSET_TAGS = (); }; };
 		CA5572FD1BA176B0003780BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5572FC1BA176B0003780BC /* main.m */; };
 		CA5573001BA176B0003780BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5572FF1BA176B0003780BC /* AppDelegate.m */; };
 		CA5573031BA176B0003780BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5573021BA176B0003780BC /* ViewController.m */; };
@@ -16,10 +19,19 @@
 		CA5573081BA176B0003780BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5573071BA176B0003780BC /* Images.xcassets */; };
 		CA55730B1BA176B0003780BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5573091BA176B0003780BC /* LaunchScreen.xib */; };
 		CA5573171BA176B0003780BC /* SelfDefineKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */; };
+		CA7E49971BD71A2400C9C3B9 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7E49961BD71A2400C9C3B9 /* UIImage+extension.m */; settings = {ASSET_TAGS = (); }; };
 		CA922AF11BB793B0002D95E0 /* WMKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */; };
 		CA922AF41BB79531002D95E0 /* WMKeyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CA922AF31BB79531002D95E0 /* WMKeyButton.m */; };
+		CAB7029F1BD7527C00D72BAC /* WMKeyboardIAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB7029E1BD7527C00D72BAC /* WMKeyboardIAView.m */; settings = {ASSET_TAGS = (); }; };
+		CAB702A11BD752A700D72BAC /* WMKeyboardIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB702A01BD752A700D72BAC /* WMKeyboardIAView.xib */; settings = {ASSET_TAGS = (); }; };
+		CAB702A51BD77D0A00D72BAC /* WMKeyboardNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB702A41BD77D0A00D72BAC /* WMKeyboardNumberView.m */; settings = {ASSET_TAGS = (); }; };
+		CAB702AB1BD7825200D72BAC /* WMKeyboardSpecialView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB702AA1BD7825200D72BAC /* WMKeyboardSpecialView.m */; settings = {ASSET_TAGS = (); }; };
 		CABB48361BC624670036C1AA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABB48351BC624670036C1AA /* CoreData.framework */; };
 		CABB48391BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CABB48371BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		CAC940111BD5E3E200FA6AD6 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC940101BD5E3E200FA6AD6 /* CoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
+		CAC940161BD5ED0F00FA6AD6 /* Button+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC940131BD5ED0F00FA6AD6 /* Button+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		CAC940171BD5ED0F00FA6AD6 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC940151BD5ED0F00FA6AD6 /* Button.m */; settings = {ASSET_TAGS = (); }; };
+		CAC9401B1BD5EF7900FA6AD6 /* KeyboardButtonText.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAC9401A1BD5EF7900FA6AD6 /* KeyboardButtonText.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +50,12 @@
 		AAF94E82BFC783F90829BF18 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CA0A6D591BB8374800077604 /* UIColor+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extension.h"; sourceTree = "<group>"; };
 		CA0A6D5A1BB8374800077604 /* UIColor+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extension.m"; sourceTree = "<group>"; };
+		CA525DDF1BD8ACD500EB1390 /* WMKeySpecialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeySpecialButton.h; sourceTree = "<group>"; };
+		CA525DE01BD8ACD500EB1390 /* WMKeySpecialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeySpecialButton.m; sourceTree = "<group>"; };
+		CA525DE51BD8B92500EB1390 /* UITextField+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+extension.h"; sourceTree = "<group>"; };
+		CA525DE61BD8B92500EB1390 /* UITextField+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+extension.m"; sourceTree = "<group>"; };
+		CA525DE81BD8B9D600EB1390 /* UITextView+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+extension.h"; sourceTree = "<group>"; };
+		CA525DE91BD8B9D600EB1390 /* UITextView+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+extension.m"; sourceTree = "<group>"; };
 		CA5572F71BA176B0003780BC /* SelfDefineKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfDefineKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5572FB1BA176B0003780BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA5572FC1BA176B0003780BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,14 +69,30 @@
 		CA5573101BA176B0003780BC /* SelfDefineKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfDefineKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5573151BA176B0003780BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA5573161BA176B0003780BC /* SelfDefineKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfDefineKeyboardTests.m; sourceTree = "<group>"; };
+		CA7E49951BD71A2400C9C3B9 /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
+		CA7E49961BD71A2400C9C3B9 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
 		CA8115211BBCE9E0003C3111 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		CA8452581BBC267E008473FD /* WMKeyKeyboardDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyKeyboardDefine.h; sourceTree = "<group>"; };
+		CA8452581BBC267E008473FD /* WMKeyboardDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardDefine.h; sourceTree = "<group>"; };
 		CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardView.h; sourceTree = "<group>"; };
 		CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardView.m; sourceTree = "<group>"; };
 		CA922AF21BB79531002D95E0 /* WMKeyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyButton.h; sourceTree = "<group>"; };
 		CA922AF31BB79531002D95E0 /* WMKeyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyButton.m; sourceTree = "<group>"; };
+		CAB7029D1BD7527C00D72BAC /* WMKeyboardIAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardIAView.h; sourceTree = "<group>"; };
+		CAB7029E1BD7527C00D72BAC /* WMKeyboardIAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardIAView.m; sourceTree = "<group>"; };
+		CAB702A01BD752A700D72BAC /* WMKeyboardIAView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMKeyboardIAView.xib; sourceTree = "<group>"; };
+		CAB702A31BD77D0A00D72BAC /* WMKeyboardNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardNumberView.h; sourceTree = "<group>"; };
+		CAB702A41BD77D0A00D72BAC /* WMKeyboardNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardNumberView.m; sourceTree = "<group>"; };
+		CAB702A91BD7825200D72BAC /* WMKeyboardSpecialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMKeyboardSpecialView.h; sourceTree = "<group>"; };
+		CAB702AA1BD7825200D72BAC /* WMKeyboardSpecialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMKeyboardSpecialView.m; sourceTree = "<group>"; };
 		CABB48351BC624670036C1AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CABB48381BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelfDefineKeyboard.xcdatamodel; sourceTree = "<group>"; };
+		CAC9400F1BD5E3E200FA6AD6 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		CAC940101BD5E3E200FA6AD6 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		CAC940121BD5ED0F00FA6AD6 /* Button+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Button+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CAC940131BD5ED0F00FA6AD6 /* Button+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Button+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CAC940141BD5ED0F00FA6AD6 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		CAC940151BD5ED0F00FA6AD6 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
+		CAC9401A1BD5EF7900FA6AD6 /* KeyboardButtonText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KeyboardButtonText.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +170,7 @@
 				CA5573091BA176B0003780BC /* LaunchScreen.xib */,
 				CA5572FB1BA176B0003780BC /* Info.plist */,
 				CA5572FC1BA176B0003780BC /* main.m */,
-				CABB48371BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld */,
+				CAC9401A1BD5EF7900FA6AD6 /* KeyboardButtonText.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,6 +192,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CA7E49941BD7183500C9C3B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA0A6D591BB8374800077604 /* UIColor+extension.h */,
+				CA0A6D5A1BB8374800077604 /* UIColor+extension.m */,
+				CA7E49951BD71A2400C9C3B9 /* UIImage+extension.h */,
+				CA7E49961BD71A2400C9C3B9 /* UIImage+extension.m */,
+				CA525DE51BD8B92500EB1390 /* UITextField+extension.h */,
+				CA525DE61BD8B92500EB1390 /* UITextField+extension.m */,
+				CA525DE81BD8B9D600EB1390 /* UITextView+extension.h */,
+				CA525DE91BD8B9D600EB1390 /* UITextView+extension.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		CA8115221BBD5010003C3111 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +214,8 @@
 				CA8115251BBD5051003C3111 /* Model */,
 				CA8115241BBD5042003C3111 /* View */,
 				CA8115231BBD5020003C3111 /* Controller */,
+				CAC9400E1BD5E3A900FA6AD6 /* CoreData */,
+				CA7E49941BD7183500C9C3B9 /* Utils */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -181,10 +232,7 @@
 		CA8115241BBD5042003C3111 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */,
-				CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */,
-				CA922AF21BB79531002D95E0 /* WMKeyButton.h */,
-				CA922AF31BB79531002D95E0 /* WMKeyButton.m */,
+				CAB702971BD7449500D72BAC /* Keyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -201,12 +249,76 @@
 			children = (
 				CA5572FE1BA176B0003780BC /* AppDelegate.h */,
 				CA5572FF1BA176B0003780BC /* AppDelegate.m */,
-				CA8452581BBC267E008473FD /* WMKeyKeyboardDefine.h */,
+				CA8452581BBC267E008473FD /* WMKeyboardDefine.h */,
 				CA8115211BBCE9E0003C3111 /* PrefixHeader.pch */,
-				CA0A6D591BB8374800077604 /* UIColor+extension.h */,
-				CA0A6D5A1BB8374800077604 /* UIColor+extension.m */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		CAB702961BD7448B00D72BAC /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CA922AF21BB79531002D95E0 /* WMKeyButton.h */,
+				CA922AF31BB79531002D95E0 /* WMKeyButton.m */,
+				CA525DDF1BD8ACD500EB1390 /* WMKeySpecialButton.h */,
+				CA525DE01BD8ACD500EB1390 /* WMKeySpecialButton.m */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
+		CAB702971BD7449500D72BAC /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CAB702A21BD76CD800D72BAC /* View */,
+				CAB702981BD74EE800D72BAC /* inputView */,
+				CAB702961BD7448B00D72BAC /* Button */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		CAB702981BD74EE800D72BAC /* inputView */ = {
+			isa = PBXGroup;
+			children = (
+				CAB7029D1BD7527C00D72BAC /* WMKeyboardIAView.h */,
+				CAB7029E1BD7527C00D72BAC /* WMKeyboardIAView.m */,
+				CAB702A01BD752A700D72BAC /* WMKeyboardIAView.xib */,
+			);
+			name = inputView;
+			sourceTree = "<group>";
+		};
+		CAB702A21BD76CD800D72BAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA922AEF1BB793B0002D95E0 /* WMKeyboardView.h */,
+				CA922AF01BB793B0002D95E0 /* WMKeyboardView.m */,
+				CAB702A31BD77D0A00D72BAC /* WMKeyboardNumberView.h */,
+				CAB702A41BD77D0A00D72BAC /* WMKeyboardNumberView.m */,
+				CAB702A91BD7825200D72BAC /* WMKeyboardSpecialView.h */,
+				CAB702AA1BD7825200D72BAC /* WMKeyboardSpecialView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CAC9400E1BD5E3A900FA6AD6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CAC9400F1BD5E3E200FA6AD6 /* CoreDataStack.h */,
+				CAC940101BD5E3E200FA6AD6 /* CoreDataStack.m */,
+				CAC940181BD5ED1800FA6AD6 /* Entity */,
+				CABB48371BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		CAC940181BD5ED1800FA6AD6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CAC940121BD5ED0F00FA6AD6 /* Button+CoreDataProperties.h */,
+				CAC940131BD5ED0F00FA6AD6 /* Button+CoreDataProperties.m */,
+				CAC940141BD5ED0F00FA6AD6 /* Button.h */,
+				CAC940151BD5ED0F00FA6AD6 /* Button.m */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +403,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB702A11BD752A700D72BAC /* WMKeyboardIAView.xib in Resources */,
+				CAC9401B1BD5EF7900FA6AD6 /* KeyboardButtonText.plist in Resources */,
 				CA5573061BA176B0003780BC /* Main.storyboard in Resources */,
 				CA55730B1BA176B0003780BC /* LaunchScreen.xib in Resources */,
 				CA5573081BA176B0003780BC /* Images.xcassets in Resources */,
@@ -344,13 +458,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB7029F1BD7527C00D72BAC /* WMKeyboardIAView.m in Sources */,
+				CA525DE71BD8B92500EB1390 /* UITextField+extension.m in Sources */,
+				CAC940161BD5ED0F00FA6AD6 /* Button+CoreDataProperties.m in Sources */,
 				CA5573031BA176B0003780BC /* ViewController.m in Sources */,
 				CABB48391BC624BB0036C1AA /* SelfDefineKeyboard.xcdatamodeld in Sources */,
+				CA7E49971BD71A2400C9C3B9 /* UIImage+extension.m in Sources */,
+				CAB702A51BD77D0A00D72BAC /* WMKeyboardNumberView.m in Sources */,
 				CA0A6D5B1BB8374800077604 /* UIColor+extension.m in Sources */,
+				CAC940111BD5E3E200FA6AD6 /* CoreDataStack.m in Sources */,
+				CAB702AB1BD7825200D72BAC /* WMKeyboardSpecialView.m in Sources */,
 				CA922AF41BB79531002D95E0 /* WMKeyButton.m in Sources */,
 				CA5573001BA176B0003780BC /* AppDelegate.m in Sources */,
+				CAC940171BD5ED0F00FA6AD6 /* Button.m in Sources */,
 				CA5572FD1BA176B0003780BC /* main.m in Sources */,
+				CA525DE11BD8ACD500EB1390 /* WMKeySpecialButton.m in Sources */,
 				CA922AF11BB793B0002D95E0 /* WMKeyboardView.m in Sources */,
+				CA525DEA1BD8B9D600EB1390 /* UITextView+extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
